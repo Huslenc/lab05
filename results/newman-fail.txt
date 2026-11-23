@@ -4,7 +4,7 @@ Lab05 Registration API (FAIL)
 
 ❏ T1 Happy path
 ↳ setup оюутан
-  PUT http://localhost:3000/students/B_T1 [200 OK, 178B, 17ms]
+  PUT http://localhost:3000/students/B_T1 [200 OK, 178B, 18ms]
   ✓  setup: статус 200
   ✓  setup: result == OK
 
@@ -14,7 +14,7 @@ Lab05 Registration API (FAIL)
   ✓  setup: result == OK
 
 ↳ T1 Идэвхтэй оюутан урьдач хангахад амжилттай бүртгэгдэнэ
-  POST http://localhost:3000/registrations [201 Created, 202B, 1ms]
+  POST http://localhost:3000/registrations [201 Created, 202B, 2ms]
   1. T1 Идэвхтэй оюутан урьдач хангахад амжилттай бүртгэгдэнэ — статус 200
   ✓  T1 Идэвхтэй оюутан урьдач хангахад амжилттай бүртгэгдэнэ — result == OK
   ✓  T1 registrationID тоо байна
@@ -37,12 +37,12 @@ Lab05 Registration API (FAIL)
   ✓  setup: result == OK
 
 ↳ setup хичээл
-  PUT http://localhost:3000/courses/CS313_T3 [200 OK, 178B, 1ms]
+  PUT http://localhost:3000/courses/CS313_T3 [200 OK, 178B, 2ms]
   ✓  setup: статус 200
   ✓  setup: result == OK
 
 ↳ T3 Идэвхгүй оюутан бүртгүүлэхэд ERROR_INACTIVE_STUDENT
-  POST http://localhost:3000/registrations [200 OK, 198B, 2ms]
+  POST http://localhost:3000/registrations [200 OK, 198B, 1ms]
   ✓  T3 Идэвхгүй оюутан бүртгүүлэхэд ERROR_INACTIVE_STUDENT — статус 200
   ✓  T3 Идэвхгүй оюутан бүртгүүлэхэд ERROR_INACTIVE_STUDENT — result == ERROR_INACTIVE_STUDENT
 
@@ -64,7 +64,7 @@ Lab05 Registration API (FAIL)
   ✓  setup: result == OK
 
 ↳ setup хичээл
-  PUT http://localhost:3000/courses/CS313_T5 [200 OK, 178B, 2ms]
+  PUT http://localhost:3000/courses/CS313_T5 [200 OK, 178B, 3ms]
   ✓  setup: статус 200
   ✓  setup: result == OK
 
@@ -81,19 +81,19 @@ Lab05 Registration API (FAIL)
   ✓  setup: result == OK
 
 ↳ setup хичээл
-  PUT http://localhost:3000/courses/CS313_T6 [200 OK, 178B, 1ms]
+  PUT http://localhost:3000/courses/CS313_T6 [200 OK, 178B, 2ms]
   ✓  setup: статус 200
   ✓  setup: result == OK
 
 ↳ T6 Урьдачийн зарим нь дутуу үед ERROR_PREREQUISITES
-  POST http://localhost:3000/registrations [200 OK, 215B, 2ms]
+  POST http://localhost:3000/registrations [200 OK, 215B, 1ms]
   ✓  T6 Урьдачийн зарим нь дутуу үед ERROR_PREREQUISITES — статус 200
   ✓  T6 Урьдачийн зарим нь дутуу үед ERROR_PREREQUISITES — result == ERROR_PREREQUISITES
   ✓  T6 missing == [CS202]
 
 ❏ T7 Давхар алдаа: оюутан ба хичээл хоёулаа байхгүй
 ↳ T7 Оюутан ба хичээл хоёул байхгүй үед тогтсон алдаа буцна
-  POST http://localhost:3000/registrations [200 OK, 192B, 1ms]
+  POST http://localhost:3000/registrations [200 OK, 192B, 2ms]
   ✓  T7 Оюутан ба хичээл хоёул байхгүй үед тогтсон алдаа буцна — статус 200
   ✓  T7 Оюутан ба хичээл хоёул байхгүй үед тогтсон алдаа буцна — result == {{expDoubleNoStudentNoCourse}}
 
@@ -104,7 +104,7 @@ Lab05 Registration API (FAIL)
   ✓  setup: result == OK
 
 ↳ setup хичээл
-  PUT http://localhost:3000/courses/CS313_T8 [200 OK, 178B, 2ms]
+  PUT http://localhost:3000/courses/CS313_T8 [200 OK, 178B, 1ms]
   ✓  setup: статус 200
   ✓  setup: result == OK
 
@@ -125,19 +125,19 @@ Lab05 Registration API (FAIL)
   ✓  setup: result == OK
 
 ↳ T9 Урьдачгүй хичээлд хоосон түүхтэй оюутан бүртгүүлж болно
-  POST http://localhost:3000/registrations [201 Created, 202B, 1ms]
+  POST http://localhost:3000/registrations [201 Created, 202B, 2ms]
   ✓  T9 Урьдачгүй хичээлд хоосон түүхтэй оюутан бүртгүүлж болно — статус 201
   ✓  T9 Урьдачгүй хичээлд хоосон түүхтэй оюутан бүртгүүлж болно — result == OK
 
 ❏ T10 Хязгаар: courseID дутуу
 ↳ T10 courseID дутуу үед ERROR_BAD_REQUEST
-  POST http://localhost:3000/registrations [400 Bad Request, 202B, 1ms]
+  POST http://localhost:3000/registrations [400 Bad Request, 202B, 2ms]
   ✓  T10 courseID дутуу үед ERROR_BAD_REQUEST — статус 400
   ✓  T10 courseID дутуу үед ERROR_BAD_REQUEST — result == ERROR_BAD_REQUEST
 
 ❏ T11 Хязгаар: буруу JSON
 ↳ T11 Буруу JSON үед ERROR_BAD_JSON
-  POST http://localhost:3000/registrations [400 Bad Request, 199B, 1ms]
+  POST http://localhost:3000/registrations [400 Bad Request, 199B, 2ms]
   ✓  T11 Буруу JSON үед ERROR_BAD_JSON — статус 400
   ✓  T11 Буруу JSON үед ERROR_BAD_JSON — result == ERROR_BAD_JSON
 
@@ -154,11 +154,11 @@ Lab05 Registration API (FAIL)
 ├─────────────────────────┼─────────────────┼─────────────────┤
 │              assertions │              53 │               1 │
 ├─────────────────────────┴─────────────────┴─────────────────┤
-│ total run duration: 386ms                                   │
+│ total run duration: 384ms                                   │
 ├─────────────────────────────────────────────────────────────┤
 │ total data received: 595B (approx)                          │
 ├─────────────────────────────────────────────────────────────┤
-│ average response time: 2ms [min: 1ms, max: 17ms, s.d.: 3ms] │
+│ average response time: 2ms [min: 1ms, max: 18ms, s.d.: 3ms] │
 └─────────────────────────────────────────────────────────────┘
 
 [31m  # [39m[31m failure        [39m[31m detail                                                                            [39m
